@@ -12,10 +12,10 @@ Currently this repo contains
 	1. RSA
 	1. ECDSA
 1. CSR
-	1. DH
-	1. RSA
-	1. ECDH
-	1. EDDSA
+	1. DH (static key-exchange)
+	1. RSA (key-encipherment and signing)
+	1. ECDH (static key-exchange)
+	1. EDDSA (signing)
 
 ## Configurations
 
