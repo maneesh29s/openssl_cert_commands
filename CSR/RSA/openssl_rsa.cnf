@@ -1,0 +1,19 @@
+[ req ]
+default_bits        = 2048
+default_md          = sha256
+default_keyfile     = rsa_key.pem
+prompt              = no
+encrypt_key         = no
+distinguished_name  = req_distinguished_name
+req_extensions      = req_ext
+
+[ req_distinguished_name ]
+C  = US
+ST = California
+L  = San Francisco
+O  = RSA key user Org
+CN = example.rsa.com
+
+[ req_ext ]
+keyUsage = critical, digitalSignature, keyEncipherment
+

@@ -1,0 +1,18 @@
+[ req ]
+default_md          = sha256
+default_keyfile     = eddsa_key.pem
+prompt              = no
+encrypt_key         = no
+distinguished_name  = req_distinguished_name
+req_extensions      = req_ext
+
+[ req_distinguished_name ]
+C  = US
+ST = California
+L  = San Francisco
+O  = EdDSA public key user
+CN = example.eddsa.com
+
+[ req_ext ]
+keyUsage = critical, keyAgreement
+
