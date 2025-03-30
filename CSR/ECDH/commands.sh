@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-# Generate ECDH private key
+# Specifying the curvature, generate EC params, then derive the private key
 openssl ecparam -name prime256v1 -genkey -noout -out ecdh_key.pem
-
-# Extract the ECDH public key
-openssl ec -in ecdh_key.pem -pubout -out ecdh_pub.pem
 
 # generate CSR
 openssl req -new -key ecdh_key.pem -out ecdh_csr.pem -config openssl_ecdh.cnf
