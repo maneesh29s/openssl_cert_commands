@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Generate EdDSA private key
-openssl genpkey -algorithm ed25519 -out eddsa_private_key.pem  
+openssl genpkey -algorithm ed25519 -out eddsa_key.pem  
 
 # generate CSR
 openssl req -new -key eddsa_key.pem -out eddsa_csr.pem -config openssl_eddsa.cnf
